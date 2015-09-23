@@ -1,0 +1,10 @@
+
+tr -c '[:alnum:]' '\n' < shakespear | sort | uniq -c| sort -nr| head -10
+
+
+awk '$5<=10000' ex1.2 > ex1.2
+
+
+tr -c '[:alnum:]' '\n' < shakespear.txt | tr 'A-Z' 'a-z'| sort | uniq| comm -23 - dictionary.txt| wc -l
+ELLER
+tr 'A-Z' 'a-z' <shakespear | tr -cs 'a-z' '\n' | sort | uniq | comm -23 - dictionary | wc -l
